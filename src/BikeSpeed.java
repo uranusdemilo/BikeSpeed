@@ -6,8 +6,8 @@ public class BikeSpeed {
         Scanner sc = new Scanner(System.in);
         Crank crank = new Crank();
         Cassette cassette = new Cassette();
+        Wheels rearWheel = new Wheels();
         Menu menu = new Menu();
-        System.out.println("********Main Menu*********");
         while(ch != 'q'){
             menu.printMainMenu();
             ch = sc.next().charAt(0);
@@ -41,6 +41,9 @@ public class BikeSpeed {
                     break;
                 case 'd':
                     cassette.shiftDown();
+                    break;
+                case 'W':
+                    rearWheel.setWheelDiameter();
                     break;
             }
         }

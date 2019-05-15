@@ -3,12 +3,14 @@ public class Crank {
     int bigRing;
     int midRing;
     int smlRing;
+    int cadence;
     int currentRing;
     public Crank(){
         this.bigRing = 46;
         this.midRing = 34;
         this.smlRing = 22;
         this.currentRing = this.midRing;
+        this.cadence = 30;
     }
     public void showRings(){
         System.out.println("Big Ring   = " + bigRing);
