@@ -43,6 +43,7 @@ public class BikeSpeed {
                     cassette.shiftDown();
                     break;
                 case 'W':
+                    menu.wheelSizeMenu();
                     rearWheel.setWheelDiameter();
                     break;
             }

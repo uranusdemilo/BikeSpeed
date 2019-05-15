@@ -14,4 +14,10 @@ public class Menu {
         System.out.println("* Quit Program -     - q  *");
         System.out.println("***************************");
     }
+    public void wheelSizeMenu(){
+        System.out.println("*Set Wheel Size*");
+        System.out.println(" 26 in   - M");
+        System.out.println(" 700c    - R");
+        System.out.println(" E0nter Selection: ");
+    }
 }

@@ -9,8 +9,8 @@ public class Wheels {
         this.ch = 'M';
     }
     public void setWheelDiameter(){
-        System.out.println(" 26 in   - M");
-        System.out.println(" 700c    - R");
+        /*System.out.println(" 26 in   - M");
+        System.out.println(" 700c    - R");*/
         this.ch = wsc.next().charAt(0);
         if(ch == 'M'){
             this.wheelDiameter = 25;}
