@@ -5,13 +5,11 @@ public class BikeSpeed {
         char ch = 'g';
         Scanner sc = new Scanner(System.in);
         Crank crank = new Crank();
+        Cassette cassette = new Cassette();
+        Menu menu = new Menu();
         System.out.println("********Main Menu*********");
         while(ch != 'q'){
-            System.out.println("Enter Chainrings   - E");
-            System.out.println("Display Chainrings - d");
-            System.out.println("Shift Chainring Up - U");
-            System.out.println("Shift Chainring Dn - D");
-            System.out.println("Quit Program -     - q");
+            menu.printMainMenu();
             ch = sc.next().charAt(0);
             //System.out.println(ch);
             switch(ch){
@@ -23,7 +21,7 @@ public class BikeSpeed {
                     System.out.println("Enter Teeth in Lower Chainring");
                     crank.smlRing = sc.nextInt();
                     break;
-                case 'd':
+                case 'R':
                     System.out.println("Big Ring    : " + crank.bigRing);
                     System.out.println("Middle Ring : " + crank.midRing);
                     System.out.println("Small Ring  : " + crank.smlRing);
@@ -35,11 +33,17 @@ public class BikeSpeed {
                 case 'D':
                     crank.shiftDown();
                     break;
-                default:
+                case 'C':
+                    cassette.showCogs();
+                    break;
+                case 'u':
+                    cassette.shiftUp();
+                    break;
+                case 'd':
+                    cassette.shiftDown();
                     break;
             }
         }
-
 
     }
 }
