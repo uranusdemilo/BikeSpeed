@@ -4,7 +4,7 @@ public class Cassette {
     int currentCog;
     public Cassette(){
         this.rearCogs=rearCogs;
-        this.currentCogNumber = 4;
+        this.currentCogNumber = 7;
         this.currentCog = rearCogs[currentCogNumber];
     }
     public void showCogs(){

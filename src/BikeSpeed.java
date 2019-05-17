@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class BikeSpeed {
     public static void main(String[] args){
         char ch = 'g';
+        float speed;
         Scanner sc = new Scanner(System.in);
         Crank crank = new Crank();
         Cassette cassette = new Cassette();
@@ -46,8 +47,18 @@ public class BikeSpeed {
                     menu.wheelSizeMenu();
                     rearWheel.setWheelDiameter();
                     break;
+                case 'S':
+                    speed = (float)((188.4 * rearWheel.wheelDiameter * crank.cadence * ((float)(crank.currentRing))/(float)(cassette.currentCog))/63360);
+                    /*speed = ((float)(crank.currentRing))/((float)(cassette.currentCog));*/
+                    System.out.println(crank.currentRing);
+                    System.out.println(cassette.currentCog);
+                    System.out.println(speed);
+                    break;
             }
         }
 
     }
+    /*public void calculateSpeed(){
+        float speed;
+    }*/
 }

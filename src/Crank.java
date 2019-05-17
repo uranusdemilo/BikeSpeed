@@ -5,12 +5,14 @@ public class Crank {
     int smlRing;
     int cadence;
     int currentRing;
+    float speed = (float)(0.0);
     public Crank(){
         this.bigRing = 46;
         this.midRing = 34;
         this.smlRing = 22;
         this.currentRing = this.midRing;
-        this.cadence = 30;
+        this.cadence = 90;
+        this.speed = 0.0F;
     }
     public void showRings(){
         System.out.println("Big Ring   = " + bigRing);

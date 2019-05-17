@@ -1,8 +1,8 @@
 import java.util.Scanner;
 public class Wheels {
     int wheelDiameter;
-    private char wheelIn;
-    private char ch;
+    char wheelIn;
+    char ch;
     Scanner wsc = new Scanner(System.in);
     public Wheels(){
         this.wheelDiameter = 25;

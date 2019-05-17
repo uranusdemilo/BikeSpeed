@@ -11,6 +11,7 @@ public class Menu {
         System.out.println("* Shift Cass Up      - u  *");
         System.out.println("* Shift Cass Down    - d  *");
         System.out.println("* Set Wheel Size     - W  *");
+        System.out.println("* Calculate Speed    - S  *");
         System.out.println("* Quit Program -     - q  *");
         System.out.println("***************************");
     }
