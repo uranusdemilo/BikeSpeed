@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class Menu {
     public Menu(){
     }
@@ -12,6 +14,7 @@ public class Menu {
         System.out.println("* Shift Cass Down    - d  *");
         System.out.println("* Set Wheel Size     - W  *");
         System.out.println("* Calculate Speed    - S  *");
+        System.out.println("* Reserved Test      - x  *");
         System.out.println("* Quit Program -     - q  *");
         System.out.println("***************************");
     }
@@ -19,6 +22,14 @@ public class Menu {
         System.out.println("*Set Wheel Size*");
         System.out.println(" 26 in   - M");
         System.out.println(" 700c    - R");
-        System.out.println(" E0nter Selection: ");
+        System.out.println(" Enter Selection: ");
+    }
+    public void promptEnterKey() {
+        System.out.println("Press ENTER Key to Continue");
+        try {
+            System.in.read();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

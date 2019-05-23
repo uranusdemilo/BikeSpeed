@@ -27,38 +27,44 @@ public class BikeSpeed {
                     System.out.println("Middle Ring : " + crank.midRing);
                     System.out.println("Small Ring  : " + crank.smlRing);
                     System.out.println("Current Ring: " + crank.currentRing);
+                    menu.promptEnterKey();
                     break;
                 case 'U':
                     crank.shiftUp();
+                    System.out.println("Current Chainring is " + crank.currentRing);
+                    menu.promptEnterKey();
                     break;
                 case 'D':
                     crank.shiftDown();
+                    System.out.println("Current Chainring is " + crank.currentRing);
+                    menu.promptEnterKey();
                     break;
                 case 'C':
                     cassette.showCogs();
+                    menu.promptEnterKey();
                     break;
                 case 'u':
                     cassette.shiftUp();
+                    System.out.println("Current Cog is " + cassette.currentCog + ", gear number " + cassette.currentCogNumber);
+                    menu.promptEnterKey();
                     break;
                 case 'd':
                     cassette.shiftDown();
+                    System.out.println("Current Cog is " + cassette.currentCog + ", gear number " + cassette.currentCogNumber);
+                    menu.promptEnterKey();
                     break;
                 case 'W':
                     menu.wheelSizeMenu();
                     rearWheel.setWheelDiameter();
+                    menu.promptEnterKey();
                     break;
                 case 'S':
                     speed = (float)((188.4 * rearWheel.wheelDiameter * crank.cadence * ((float)(crank.currentRing))/(float)(cassette.currentCog))/63360);
-                    /*speed = ((float)(crank.currentRing))/((float)(cassette.currentCog));*/
-                    System.out.println(crank.currentRing);
-                    System.out.println(cassette.currentCog);
                     System.out.println(speed);
+                    menu.promptEnterKey();
                     break;
             }
         }
 
     }
-    /*public void calculateSpeed(){
-        float speed;
-    }*/
 }
